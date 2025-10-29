@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+.vscode/
+.idea/
+dist/
+build/
+*.log
+*.sqlite
+.docker/
+docker-data/
+node_modules/
