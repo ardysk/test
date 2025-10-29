@@ -1,14 +1,4 @@
-services:
-  web:
-    build: .
-    container_name: app_web
-    ports:
-      - "8000:8000"
-    depends_on:
-      - db
-    environment:
-      - DATABASE_URL=postgresql://app:app@db:5432/app
-    networks: [appnet]
+Zamiast budować na serwerze, pobierzemy obraz:
 
   db:
     image: postgres:15
