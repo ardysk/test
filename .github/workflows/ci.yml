@@ -50,7 +50,6 @@ jobs:
           script: |
             set -e
             cd ${{ secrets.DEPLOY_PATH }}
-            # zaloguj się do GHCR (jednorazowo możesz zrobić to też ręcznie na serwerze)
             echo "${{ secrets.GHCR_READ_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin || true
             docker compose pull
             docker compose up -d
